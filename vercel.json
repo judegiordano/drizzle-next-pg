@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "public": false,
+  "trailingSlash": false,
+  "cleanUrls": true,
+  "name": "not-linktree",
+  "github": {
+    "enabled": false
+  }
+}

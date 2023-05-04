@@ -2,10 +2,19 @@ import React from 'react'
 import Link from 'next/link'
 import { asc, eq } from 'drizzle-orm'
 import { notFound } from 'next/navigation'
+import type { Metadata } from 'next'
 
 import { db } from '@/lib/database'
 import { links, users } from '@/models/schema'
 import { Divider } from '@/ui/Divider'
+import { baseMetaData } from '@/lib/config'
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+	return {
+		...baseMetaData,
+		title: `Def Not Linktree | ${params.slug}`,
+	}
+}
 
 export default async function Home({ params }: { params: { slug: string } }) {
 	const userSlug = params.slug

@@ -1,28 +1,10 @@
 import React from 'react'
 import { Poppins } from 'next/font/google'
-import '../../styles/globals.css'
 
-export const metadata = {
-	title: 'Def Not Linktree',
-	description: 'idk man just some links',
-	icons: '/stool.png',
-	robots: {
-		follow: true,
-		index: true
-	},
-	openGraph: {
-		description: 'idk man just some links',
-		title: 'Not Linktree',
-		siteName: 'not-linktree.vercel.app',
-		url: 'https://not-linktree.vercel.app',
-		images: {
-			url: '/stool.png',
-			width: 512,
-			height: 512
-		},
-		type: 'website'
-	}
-}
+import '../../styles/globals.css'
+import { baseMetaData } from '@/lib/config'
+
+export const metadata = baseMetaData
 
 const poppins = Poppins({
 	weight: ['400', '700'],

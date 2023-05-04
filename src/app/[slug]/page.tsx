@@ -12,7 +12,10 @@ import { baseMetaData } from '@/lib/config'
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
 	return {
 		...baseMetaData,
-		title: `Def Not Linktree | ${params.slug}`,
+		openGraph: {
+			...baseMetaData.openGraph,
+			title: `${baseMetaData.openGraph?.title} | ${params.slug}`,
+		}
 	}
 }
 

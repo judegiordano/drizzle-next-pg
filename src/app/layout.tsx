@@ -20,7 +20,7 @@ const poppins = Poppins({
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 	// 'dracula', 'luxury', 'night', 'lofi', 'cupcake', 'garden'
-		<html lang="en" data-theme="luxury">
+		<html lang="en" data-theme="garden">
 			<body className={poppins.className}>
 				{children}
 			</body>

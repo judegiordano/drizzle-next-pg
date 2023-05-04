@@ -9,6 +9,18 @@ export const metadata = {
 	robots: {
 		follow: true,
 		index: true
+	},
+	openGraph: {
+		description: 'idk man just some links',
+		title: 'Not Linktree',
+		siteName: 'not-linktree.vercel.app',
+		url: 'https://not-linktree.vercel.app',
+		images: {
+			url: '/stool.png',
+			width: 512,
+			height: 512
+		},
+		type: 'website'
 	}
 }
 
